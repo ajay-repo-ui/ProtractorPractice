@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1740379420326' stop='1740379436330'>
+    <name>Validate Customer Login Functionality</name>
+    <title>Validate Customer Login Functionality</title>
+    <test-cases>
+        <test-case start='1740379420326' status='passed' stop='1740379427013'>
+            <name>Open website and click on CustomerLogin button</name>
+            <title>Open website and click on CustomerLogin button</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='7436030b-6202-4a05-a0e5-d466923f4850-attachment.png' type='image/png' size='32672'/>
+            </attachments>
+        </test-case>
+        <test-case start='1740379427013' status='passed' stop='1740379429519'>
+            <name>Select User and Click on Login</name>
+            <title>Select User and Click on Login</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='e555e6ba-7960-4717-8d45-961f2ab0c690-attachment.png' type='image/png' size='47415'/>
+            </attachments>
+        </test-case>
+        <test-case start='1740379429519' status='passed' stop='1740379434158'>
+            <name>Validate Deposits</name>
+            <title>Validate Deposits</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6532945b-840a-4954-9c34-16f9a076ce65-attachment.png' type='image/png' size='57661'/>
+            </attachments>
+        </test-case>
+        <test-case start='1740379434159' status='passed' stop='1740379436329'>
+            <name>Validate Withdraw</name>
+            <title>Validate Withdraw</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='7b9e106e-5240-4861-8490-2b7be5dbfb60-attachment.png' type='image/png' size='57661'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

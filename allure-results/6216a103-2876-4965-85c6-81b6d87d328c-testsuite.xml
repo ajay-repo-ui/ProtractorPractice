@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1740396852471' stop='1740396870789'>
+    <name>Validate Bank Manager Login Functionality</name>
+    <title>Validate Bank Manager Login Functionality</title>
+    <test-cases>
+        <test-case start='1740396852471' status='passed' stop='1740396861953'>
+            <name>Open website and click on CustomerLogin button</name>
+            <title>Open website and click on CustomerLogin button</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6b502e55-6bf8-40e2-a152-4bfb8c5c9edf-attachment.png' type='image/png' size='34728'/>
+            </attachments>
+        </test-case>
+        <test-case start='1740396861953' status='passed' stop='1740396870785'>
+            <name>Validate Add Customer</name>
+            <title>Validate Add Customer</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='7259cf50-55b6-44d0-964a-61fe1023097f-attachment.png' type='image/png' size='40276'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

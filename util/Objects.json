@@ -1,0 +1,73 @@
+{
+
+    "testurl" : "https://www.way2automation.com/angularjs-protractor/banking/#/login",
+    "locators":{
+
+        "homepage":{
+
+            "sampleForm":".btn.btn-primary",
+            "customerLogin":"Customer Login",
+            "bankManagerLogin":"Bank Manager Login",
+            "lifeTimemembershipLogin":"Lifetime Membership"
+        },
+
+        "sampleFormPage":{
+
+            "firstName":"firstName",
+            "lastName":"lastName",
+            "emailId":"email",
+            "password":"password",
+            "checkBox":"//input[@name='hobbies']",
+            "gender":"gender",
+            "maleGender":"option[value='male']",
+            "femaleGender":"option[value='female']",
+            "aboutBox":"about",
+            "registerButton":"Register",
+            "successMessage":"successMessage",
+            "errorMessage":"errorMessage"
+        },
+
+        "customerLoginPage":{
+
+            "depositLocator":{
+                "selectUserByValue":"2",
+                "loginButton":"Login",
+                "depositButton":"Deposit",
+                "depositAmount":"amount",
+                "depositAmountButton":".btn.btn-default",
+                "depositMessage":"message"
+            },
+
+            "withdrawLocator":{
+                "withdrawButton":"Withdrawl",
+                "withdrawAmount":"amount",
+                "withdrawAmountButton":".btn.btn-default",
+                "withdrawMessage":"message"
+            }
+        },
+
+        "bankManagerLoginPage":{
+            "addCustomer":{
+                "addCustButton":"Add Customer",
+                "firstname":"firstName",
+                "lastname":"lastName",
+                "postcode":"postCd",
+                "addCustomerButton":".btn.btn-default"
+            },
+
+            "openAccount":{
+
+            },
+
+            "customerCheck":{
+
+            }
+        },
+
+        "lifeTimemembershipLoginPage":{
+
+        }
+    }
+
+
+}

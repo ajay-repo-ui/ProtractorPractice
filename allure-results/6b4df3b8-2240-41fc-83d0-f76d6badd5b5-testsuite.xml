@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1740377678828' stop='1740377681639'>
+    <name>Validate Customer Login Functionality</name>
+    <title>Validate Customer Login Functionality</title>
+    <test-cases>
+        <test-case start='1740377678828' status='passed' stop='1740377681294'>
+            <name>Open website and click on CustomerLogin button</name>
+            <title>Open website and click on CustomerLogin button</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6b1fc424-57be-4553-aed4-73da04778b31-attachment.png' type='image/png' size='31813'/>
+            </attachments>
+        </test-case>
+        <test-case start='1740377681294' status='passed' stop='1740377681639'>
+            <name>Select User and Click on Login</name>
+            <title>Select User and Click on Login</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6fcaad38-1e47-4ad3-a46c-5f5e851d0e2a-attachment.png' type='image/png' size='21667'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

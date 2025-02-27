@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1740399446209' stop='1740399453915'>
+    <name>Validate Bank Manager Login Functionality</name>
+    <title>Validate Bank Manager Login Functionality</title>
+    <test-cases>
+        <test-case start='1740399446209' status='passed' stop='1740399453914'>
+            <name>Open website and click on Lifetime Membership button</name>
+            <title>Open website and click on Lifetime Membership button</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='1bfee9d0-de2c-48e4-8afe-ce9800248e6e-attachment.png' type='image/png' size='537887'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

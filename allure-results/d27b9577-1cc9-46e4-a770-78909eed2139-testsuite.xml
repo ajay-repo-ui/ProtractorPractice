@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1740130045221' stop='1740130049549'>
+    <name>Validate Sample Form Registration</name>
+    <title>Validate Sample Form Registration</title>
+    <test-cases>
+        <test-case start='1740130045222' status='passed' stop='1740130048214'>
+            <name>Open Website and Click on Sample Form and Verify Title</name>
+            <title>Open Website and Click on Sample Form and Verify Title</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='c85c7553-889e-4ef3-bad9-9f4f5e362090-attachment.png' type='image/png' size='35824'/>
+            </attachments>
+        </test-case>
+        <test-case start='1740130048214' status='passed' stop='1740130049035'>
+            <name>Enter Correct User Details and Verify Registration Successful Message</name>
+            <title>Enter Correct User Details and Verify Registration Successful Message</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='74280839-00cd-4f9e-afee-6ef9c91adb90-attachment.png' type='image/png' size='31387'/>
+            </attachments>
+        </test-case>
+        <test-case start='1740130049035' status='passed' stop='1740130049548'>
+            <name>Directly Click on register button and verify Error Message</name>
+            <title>Directly Click on register button and verify Error Message</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='55a56eac-c518-43e6-8c3e-8d9fda40db68-attachment.png' type='image/png' size='35838'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
