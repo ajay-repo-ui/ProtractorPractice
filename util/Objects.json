@@ -70,7 +70,7 @@
         },
 
         "lifeTimemembershipLoginPage":{
-
+            "linkedInButton":"a[aria-label='Linkedin']"
         }
     }
 
