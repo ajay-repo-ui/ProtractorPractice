@@ -56,11 +56,16 @@
             },
 
             "openAccount":{
-
+                "openAccButton":"Open Account",
+                "customerName":"Raman Arora",
+                "currencyName":"Rupee",
+                "processButton":"Process"
             },
 
             "customerCheck":{
-
+                "checkCustomerButton":"Customers",
+                "searchCustomer":"searchCustomer",
+                "checkCustomer":"cust in Customers"
             }
         },
 
