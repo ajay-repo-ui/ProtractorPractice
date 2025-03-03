@@ -1,62 +1,43 @@
-var UserDetails = function() {
+var SelectWrapper = require('..//util//select-wrapper.js');
+var mySelect = new SelectWrapper(by.id("gender"));
+var obj = require('..//util//Objects.json');
 
-    this.UserDetails = function(){
+var UserDetails = function () {
 
-        // Enter first name
-        element(by.id("firstName")).sendKeys("Rakesh");
-        // Enter last name
-        element(by.id("lastName")).sendKeys("Rana");
-        // Email
-        element(by.id("email")).sendKeys("abc@gmail.com");
-        // Password
-        element(by.id("password")).sendKeys("password");
-        // Hobbies
-        let checkboxes = element.all(by.xpath('//input[@name="hobbies"]'));
-        checkboxes.each(function(selected){
+    this.addAllregistrationdeatils = function (firstName, lastName, email, password) {
+        element(by.xpath(obj.registrationPageObjects.locators.firstName)).sendKeys(firstName);
+        element(by.xpath(obj.registrationPageObjects.locators.lastName)).sendKeys(lastName);
+        element(by.xpath(obj.registrationPageObjects.locators.email)).sendKeys(email);
+        element(by.xpath(obj.registrationPageObjects.locators.password)).sendKeys(password);
+        element(by.xpath(obj.registrationPageObjects.locators.Reading)).click();
+        element(by.xpath(obj.registrationPageObjects.locators.Traveling)).click();
+        element(by.xpath(obj.registrationPageObjects.locators.Sports)).click();
+        mySelect.selectByText(obj.registrationPageObjects.values.GenderFemale);
+        element(by.xpath(obj.registrationPageObjects.locators.about)).sendKeys(obj.registrationPageObjects.values.aboutDesc);
+        browser.sleep(2000);
+        element(by.xpath(obj.registrationPageObjects.locators.RegisterBtn)).click();
+        browser.sleep(1000);
+        var message = element(by.xpath(obj.registrationPageObjects.locators.successMessage)).getText();
+        expect(element(by.xpath(obj.registrationPageObjects.locators.successMessage)).getText()).toEqual(obj.registrationPageObjects.values.successMessage);
+        console.log(message);
 
-            selected.click();
-            
-        });
-        // Gender Selection
-        let selectGender = element(by.id("gender"));
-        selectGender.element(by.css('option[value="female"]')).click();
+    };
+    this.addfewdetailsandvalidateregistrationform = function (firstName, lastName, email, password) {
+        element(by.xpath(obj.registrationPageObjects.locators.firstName)).sendKeys(firstName);
+        element(by.xpath(obj.registrationPageObjects.locators.lastName)).sendKeys(lastName);
+        element(by.xpath(obj.registrationPageObjects.locators.email)).sendKeys(email);
+        element(by.xpath(obj.registrationPageObjects.locators.password)).sendKeys(password);
+        element(by.xpath(obj.registrationPageObjects.locators.Reading)).click();
+        element(by.xpath(obj.registrationPageObjects.locators.Traveling)).click();
+        element(by.xpath(obj.registrationPageObjects.locators.Sports)).click();
+        mySelect.selectByText(obj.registrationPageObjects.values.GenderFemale);
+        browser.sleep(2000);
+        element(by.xpath(obj.registrationPageObjects.locators.RegisterBtn)).click();
+        browser.sleep(1000);
+        var errmsg = element(by.xpath(obj.registrationPageObjects.locators.errorMessage)).getText();
+        expect(element(by.xpath(obj.registrationPageObjects.locators.errorMessage)).getText()).toEqual(obj.registrationPageObjects.values.errorMessage);
+        console.log(errmsg);
+    };
 
-        // Print Selected Gender
-        var printGender= selectGender.element(by.css('option[value="male"]')).getText();
-        // printGender.getText().then(function(text){
-        //     console.log(text);
-        // });
-
-        // About
-        element(by.id("about")).sendKeys("Hello World");
-
-    }
-
-    this.RegisterButton = function(){
-
-        // Click on Register Button
-        element(by.buttonText("Register")).click();
-
-    }
-
-    this.ValidateSuccessMessage = function(){
-
-        // Validate Success Message
-        element(by.id("successMessage")).getText().then(function(text){
-            expect(text).toContain("User registered successfully!");
-            console.log(text);
-        });
-    }
-
-    this.ValidateErrorMessage =  function(){
-
-        // Verify Error message
-        element(by.id("errorMessage")).getText().then(function(text){
-            console.log(text);
-            expect(text).toContain("All fields must be filled!");
-            
-        });
-    }
-   
 };
 module.exports = new UserDetails();

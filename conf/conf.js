@@ -4,7 +4,8 @@ exports.config = {
   
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
-      'browserName': 'chrome'
+      'browserName': 'chrome',
+      maxInstances: 2,
     },
   
     // Framework to use. Jasmine is recommended.
@@ -14,11 +15,15 @@ exports.config = {
     // protractor is called.
     specs: ['..//test_spec//LifeTimeMembershipPage_spec.js'],
   
-
+    // Options to be passed to Jasmine.
+    jasmineNodeOpts: {
+      defaultTimeoutInterval: 30000
+    },
     //Allure Report
     onPrepare: function() {
 
       browser.ignoreSynchronization=true;
+      browser.driver.manage().window().maximize();
       browser.driver.manage().timeouts().implicitlyWait(5000);
       
       //jasmine allure reporter

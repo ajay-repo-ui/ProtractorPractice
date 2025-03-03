@@ -1,3 +1,6 @@
+require('../util/customlocators.js');
+var obj=require('..//util//Objects.json');
+
 var HomePage = function() {
 
     this.SampleForm = function(){
@@ -7,19 +10,17 @@ var HomePage = function() {
 
     this.CustomerLogin = function(){
 
-        element(by.buttonText('Customer Login')).click();
+        element(by.ngClick("customer()")).click();
     };
 
     this.BankManagerLogin = function(){
-        browser.sleep(2000);
-        element(by.buttonText("Bank Manager Login")).click();
-        
+        element(by.ngClick("manager()")).click();
     }
    
     this.MembershipPage = function(){
         // element(by.linkText("Lifetime Membership")).click();
         element(by.xpath("(//a[@class='btn btn-primary btn-lg'])[2]")).click();
-        browser.sleep(2000);
+        browser.sleep(obj.sleepTime);
     }
 };
 module.exports = new HomePage();

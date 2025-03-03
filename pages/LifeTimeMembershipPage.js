@@ -3,25 +3,18 @@
 var LifeTimeMembershipPage = function() {
 
     this.navigateToLinkedin = function(){
-        var linkedIn = element(by.css('a[aria-label="Linkedin"]'));
-        linkedIn.click();
+        element(By.xpath(obj.LifeTime.locators.linkdin)).click();
         browser.sleep(5000);
-
-
         browser.getAllWindowHandles().then(function(handles){
-            if(handles.length >= 1) {
-                browser.switchTo().window(handles[1]).then(function() {
-                    browser.getTitle().then(function(title) {
-                        console.log(title);
-                    });
-                });
-            }
-            else
-            {
-                console.log('No additional window found');
-            }
-        });
+            browser.switchTo().window(handles[1]).then(function(){
+                basepage.pageTitle().then(function(text){
+                    console.log("linkdin site title:"+text);
+                })
+                expect(basepage.pageTitle()).toEqual("Sign Up | LinkedIn");
+            })
+        })
     }
+    
     
 
     

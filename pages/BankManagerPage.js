@@ -1,55 +1,57 @@
 var SelectWrapper = require('..//util//select-wrapper.js');
 var mySelect = new SelectWrapper(by.id("userSelect"));
 var currency = new SelectWrapper(by.id("currency"));
-
+var obj=require('..//util//Objects.json');
+//var alert=require('../Pages/alerts.js');
 var BankManagerpage = function() {
 
     this.AddCustomer = function(){
-        browser.sleep(2000);
-        element(by.buttonText("Add Customer")).click();
-        browser.sleep(2000);
-        element(by.model("fName")).sendKeys("Raman");
-        element(by.model("lName")).sendKeys("Arora");
-        element(by.model("postCd")).sendKeys("110095");
-        element(by.css(".btn.btn-default")).click();
-        browser.sleep(2000);
-        var alertDialog = browser.switchTo().alert();
-        alertDialog.getText().then(function(text){
-
-            console.log(text);
-        })
-        alertDialog.accept();
-        browser.sleep(2000);
+        element(by.ngClick("addCust()")).click();
     }
 
     this.OpenAccount = function(){
-        element(by.buttonText("Open Account")).click();
-        browser.sleep(2000);
-        mySelect.selectByText("Raman Arora");
-        currency.selectByText("Rupee");
-        element(by.buttonText("Process")).click();
-        browser.sleep(2000);
-        var alertDialog = browser.switchTo().alert();
-        alertDialog.getText().then(function(text){
-
-            console.log(text);
-        })
-
-        alertDialog.accept();
-        browser.sleep(2000);
+        element(by.ngClick("openAccount()")).click();
     }
 
     this.CheckCustomer = function(){
         element(by.buttonText("Customers")).click();
-        browser.sleep(2000);
-        element(by.model("searchCustomer")).sendKeys("Raman");
-        var firstName = element(by.repeater("cust in Customers").row(0).column("cust.fName"));
+    }
+    this.AddCustomerInfo = function(fname,lname,postCd){
+        element(by.xpath(obj.BankManagerPageObjects.locators.fName)).sendKeys(fname);
+        element(by.xpath(obj.BankManagerPageObjects.locators.lname)).sendKeys(lname);
+        element(by.xpath(obj.BankManagerPageObjects.locators.postCd)).sendKeys(postCd);
+        element(by.css(obj.CustomerPageObjects.locators.DepositBtn)).click();
+        browser.sleep(obj.timeOut);
+        alert.getAlertText();
+        alert.alertaccept();
+        browser.sleep(obj.timeOut);
+    }
+    this.openAccountInfo=function(name,cur){
+        mySelect.selectByText(name);
+        currency.selectByText(cur);
+        element(by.buttonText(obj.BankManagerPageObjects.locators.processBtn)).click();
+        browser.sleep(obj.timeOut);
+        alert.getAlertText();
+        alert.alertaccept();
+        browser.sleep(obj.timeOut);
+    }
+    this.checkCustomerInfo=function(fname){
+        element(by.xpath(obj.BankManagerPageObjects.locators.searchCustomer)).sendKeys(fname);
+        var firstName = element(by.repeater(obj.BankManagerPageObjects.locators.CustTable).row(0).column(obj.BankManagerPageObjects.locators.fnameCol));
+        var lastName = element(by.repeater(obj.BankManagerPageObjects.locators.CustTable).row(0).column(obj.BankManagerPageObjects.locators.lnameCol));
+        var postCode = element(by.repeater(obj.BankManagerPageObjects.locators.CustTable).row(0).column(obj.BankManagerPageObjects.locators.PostCodeCol));
         firstName.getText().then(function(text){
-            console.log(text);
+            console.log("first Name:"+text);
         });
-
-        expect(firstName.getText()).toEqual("Raman");
-
+        expect(firstName.getText()).toEqual(obj.BankManagerPageObjects.values.fname);
+        lastName.getText().then(function(lname){
+            console.log("last Name:"+lname);
+        });
+        expect(lastName.getText()).toEqual(obj.BankManagerPageObjects.values.lname);
+        postCode.getText().then(function(pCode){
+            console.log("Post Code:"+pCode);
+        });
+        expect(postCode.getText()).toEqual(obj.BankManagerPageObjects.values.postcode);
         browser.sleep(2000);
     }
        

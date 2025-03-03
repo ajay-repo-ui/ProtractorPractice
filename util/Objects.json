@@ -1,78 +1,81 @@
 {
 
     "testurl" : "https://www.way2automation.com/angularjs-protractor/banking/#/login",
-    "locators":{
+    "sleepTime":"2000",
 
-        "homepage":{
-
-            "sampleForm":".btn.btn-primary",
-            "customerLogin":"Customer Login",
-            "bankManagerLogin":"Bank Manager Login",
-            "lifeTimemembershipLogin":"Lifetime Membership"
+    "registrationPageObjects":{
+        "locators":{
+            "firstName":"//*[@id='firstName']",
+            "lastName":"//*[@id='lastName']",
+            "email":"//*[@id='email']",
+            "password":"//*[@id='password']",
+            "Reading":"//*[text()=' Reading']",
+            "Traveling":"//*[text()=' Traveling']",
+            "Sports":"//*[text()=' Sports']",
+            "about":"//*[@name='about']",
+            "RegisterBtn":"//*[text()='Register']",
+            "successMessage":"//*[@id='successMessage']",
+            "errorMessage":"//*[@id='errorMessage']"
         },
+        "values":{
+            "fname":"Ajay",
+            "lname":"Kumar",
+            "email":"abcd@gmail.com",
+            "pwd":"123456",
+            "errorMessage":"All fields must be filled!",
+            "successMessage":"User registered successfully!",
+            "aboutDesc":"This is the description box text.",
+            "GenderMale":"Male",
+            "GenderFemale":"Female"
+        } 
+    },
+    "CustomerPageObjects":{
+        "locators":{
+            "loginButton":"Login",
+            "userNameTxt":"//strong//span",
+            "transaction":"transactions()",
+            "deposit":"deposit()",
+            "withdrawl":"withdrawl()",
+            "accountNo":"//div[@ng-hide='noAccount']//strong[1]",
+            "amountDepositInput":"//input[@ng-model='amount']",
+            "DepositBtn":".btn.btn-default",
+            "TransTable":"tx in transactions",
+            "Amount":"Amount",
+            "TransType":"Transaction Type"
 
-        "sampleFormPage":{
-
-            "firstName":"firstName",
-            "lastName":"lastName",
-            "emailId":"email",
-            "password":"password",
-            "checkBox":"//input[@name='hobbies']",
-            "gender":"gender",
-            "maleGender":"option[value='male']",
-            "femaleGender":"option[value='female']",
-            "aboutBox":"about",
-            "registerButton":"Register",
-            "successMessage":"successMessage",
-            "errorMessage":"errorMessage"
         },
-
-        "customerLoginPage":{
-
-            "depositLocator":{
-                "selectUserByValue":"2",
-                "loginButton":"Login",
-                "depositButton":"Deposit",
-                "depositAmount":"amount",
-                "depositAmountButton":".btn.btn-default",
-                "depositMessage":"message"
-            },
-
-            "withdrawLocator":{
-                "withdrawButton":"Withdrawl",
-                "withdrawAmount":"amount",
-                "withdrawAmountButton":".btn.btn-default",
-                "withdrawMessage":"message"
-            }
+        "values":{
+            "userName":"Harry Potter",
+            "accNo":"1005",
+            "amountToBeDeposit":1000,
+            "amountToBeWithdraw":500
+        }
+    },
+    "BankManagerPageObjects":{
+        "locators":{
+            "fName":"//input[@ng-model='fName']",
+            "lname":"//input[@ng-model='lName']",
+            "postCd":"//input[@ng-model='postCd']",
+            "processBtn":"Process",
+            "searchCustomer":"//input[@ng-model='searchCustomer']",
+            "CustTable":"cust in Customers",
+            "fnameCol":"cust.fName",
+            "lnameCol":"cust.lName",
+            "PostCodeCol":"cust.postCd"
         },
-
-        "bankManagerLoginPage":{
-            "addCustomer":{
-                "addCustButton":"Add Customer",
-                "firstname":"firstName",
-                "lastname":"lastName",
-                "postcode":"postCd",
-                "addCustomerButton":".btn.btn-default"
-            },
-
-            "openAccount":{
-                "openAccButton":"Open Account",
-                "customerName":"Raman Arora",
-                "currencyName":"Rupee",
-                "processButton":"Process"
-            },
-
-            "customerCheck":{
-                "checkCustomerButton":"Customers",
-                "searchCustomer":"searchCustomer",
-                "checkCustomer":"cust in Customers"
-            }
+        "values":{
+            "fname":"Ajay",
+            "lname":"Kumar",
+            "postcode":"123456",
+            "currencyRupee":"Rupee"
+        }
+    },
+    "LifeTime":{
+        "locators":{
+            "linkdin":"//*[@aria-label='Linkedin']"
         },
-
-        "lifeTimemembershipLoginPage":{
-            "linkedInButton":"a[aria-label='Linkedin']"
+        "values":{
+            
         }
     }
-
-
 }
