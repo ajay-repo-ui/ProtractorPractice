@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1741018801935' stop='1741018827666'>
+    <name>Validate Bank Manager Login Functionality</name>
+    <title>Validate Bank Manager Login Functionality</title>
+    <test-cases>
+        <test-case start='1741018801936' status='passed' stop='1741018812390'>
+            <name>Open website</name>
+            <title>Open website</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='7c802f4b-7a90-4b10-9a27-009306fe060b-attachment.png' type='image/png' size='31270'/>
+            </attachments>
+        </test-case>
+        <test-case start='1741018812390' status='passed' stop='1741018819712'>
+            <name>click on Lifetime Membership button</name>
+            <title>click on Lifetime Membership button</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='1cb5303b-62fc-41b1-88d6-65d420ba3d42-attachment.png' type='image/png' size='537887'/>
+            </attachments>
+        </test-case>
+        <test-case start='1741018819712' status='passed' stop='1741018827665'>
+            <name>Click on LinkedIn and Print Titlr with Windows handle</name>
+            <title>Click on LinkedIn and Print Titlr with Windows handle</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='dc6e13b6-e0af-4044-b3d0-ff50cc90826f-attachment.png' type='image/png' size='73607'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

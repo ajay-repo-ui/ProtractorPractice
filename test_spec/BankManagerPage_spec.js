@@ -18,18 +18,18 @@ describe("Validate Bank Manager Login Functionality",function(){
     it("Validate Add Customer",function(){
         BankManagerpage.AddCustomer();
         browser.sleep(obj.sleepTime);
-        BankManagerpage.AddCustomerInfo(obj.BankManagerPage.values.fname,obj.BankManagerPage.values.lname,obj.BankManagerPage.values.postcode);
+        BankManagerpage.AddCustomerInfo(obj.BankManagerPageObjects.values.fname,obj.BankManagerPageObjects.values.lname,obj.BankManagerPageObjects.values.postcode);
     });
 
     it("Validate Open Account",function(){
         BankManagerpage.OpenAccount();
         browser.sleep(obj.timeOut);
-        BankManagerpage.openAccountInfo(obj.BankManagerPage.values.fname+" "+obj.BankManagerPage.values.lname,obj.BankManagerPage.values.currencyRupee);
+        BankManagerpage.openAccountInfo(obj.BankManagerPageObjects.values.fname+" "+obj.BankManagerPageObjects.values.lname,obj.BankManagerPageObjects.values.currencyRupee);
     });
 
     it("Validate Customer Existance",function(){
         BankManagerpage.CheckCustomer();
         browser.sleep(obj.timeOut);
-        BankManagerpage.checkCustomerInfo(obj.BankManagerPage.values.fname);
+        BankManagerpage.checkCustomerInfo(obj.BankManagerPageObjects.values.fname);
     });
 });

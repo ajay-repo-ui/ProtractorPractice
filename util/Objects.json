@@ -1,7 +1,7 @@
 {
 
     "testurl" : "https://www.way2automation.com/angularjs-protractor/banking/#/login",
-    "sleepTime":"2000",
+    "sleepTime":"5000",
 
     "registrationPageObjects":{
         "locators":{
@@ -70,7 +70,7 @@
             "currencyRupee":"Rupee"
         }
     },
-    "LifeTime":{
+    "LifeTimeObjects":{
         "locators":{
             "linkdin":"//*[@aria-label='Linkedin']"
         },

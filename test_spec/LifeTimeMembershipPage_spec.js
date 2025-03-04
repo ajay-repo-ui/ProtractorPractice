@@ -2,6 +2,7 @@ var BasePage = require('..//pages//BasePage.js');
 var HomePage = require('..//pages//HomePage.js');
 var LifeTimeMembershipPage = require('..//pages//LifeTimeMembershipPage.js');
 var obj=require('..//util//Objects.json');
+require('..//util//customlocator.js');
 
 describe("Validate Bank Manager Login Functionality",function(){
 

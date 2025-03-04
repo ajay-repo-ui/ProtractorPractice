@@ -2,7 +2,7 @@
 var BasePage = function(){
 
     this.navigateToURL = function(testurl){
-      browser.get(testurl);
+      browser.get('testurl');
     };
   
     this.getPageTitle = function(){

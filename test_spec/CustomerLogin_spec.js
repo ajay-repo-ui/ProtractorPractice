@@ -8,9 +8,9 @@ var mySelect = new SelectWrapper(by.model("custId"));
 
 describe("Automating Customer Login functionality",function(){
     it("Login to the Account",function(){
-         BasePage.navigatetoURL(obj.url);
+         BasePage.navigateToURL(obj.url);
          browser.sleep(obj.timeOut);
-         HomePage.loginasCustomer();
+         HomePage.CustomerLogin();
          browser.sleep(2000);
          mySelect.selectByText(obj.CustomerPageObjects.values.userName);  
          element(by.buttonText(obj.CustomerPageObjects.locators.loginButton)).click();

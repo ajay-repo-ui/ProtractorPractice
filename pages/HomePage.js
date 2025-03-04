@@ -1,4 +1,4 @@
-require('../util/customlocators.js');
+require('..//util//customlocator.js');
 var obj=require('..//util//Objects.json');
 
 var HomePage = function() {
