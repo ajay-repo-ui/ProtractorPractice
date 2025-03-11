@@ -1,7 +1,7 @@
 {
 
     "testurl" : "https://www.way2automation.com/angularjs-protractor/banking/#/login",
-    "sleepTime":"5000",
+    "sleepTime":"10000",
 
     "registrationPageObjects":{
         "locators":{

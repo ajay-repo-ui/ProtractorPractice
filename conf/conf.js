@@ -13,7 +13,7 @@ exports.config = {
   
     // Spec patterns are relative to the current working directory when
     // protractor is called.
-    specs: ['..//test_spec//BankManagerPage_spec.js'],
+    specs: ['..//test_spec//SampleForm_spec.js'],
   
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {
@@ -33,7 +33,7 @@ exports.config = {
       }));
   
   
-      
+      //Screenshot
       jasmine.getEnv().afterEach(function(done){
         browser.takeScreenshot().then(function (png) {
           allure.createAttachment('Screenshot', function () {

@@ -3,14 +3,15 @@ var mySelect = new SelectWrapper(by.id("userSelect"));
 var currency = new SelectWrapper(by.id("currency"));
 var obj=require('..//util//Objects.json');
 //var alert=require('../Pages/alerts.js');
+require('..//util//customlocator.js');
 var BankManagerpage = function() {
 
     this.AddCustomer = function(){
-        element(by.ngClick("addCust()")).click();
+        element(by.buttonText("Add Customer")).click();
     }
 
     this.OpenAccount = function(){
-        element(by.ngClick("openAccount()")).click();
+        element(by.buttonText("Open Account")).click();
     }
 
     this.CheckCustomer = function(){
@@ -22,8 +23,8 @@ var BankManagerpage = function() {
         element(by.xpath(obj.BankManagerPageObjects.locators.postCd)).sendKeys(postCd);
         element(by.css(obj.CustomerPageObjects.locators.DepositBtn)).click();
         browser.sleep(obj.timeOut);
-        alert.getAlertText();
-        alert.alertaccept();
+        // alert.getAlertText();
+        // alert.alertaccept();
         browser.sleep(obj.timeOut);
     }
     this.openAccountInfo=function(name,cur){
@@ -31,8 +32,8 @@ var BankManagerpage = function() {
         currency.selectByText(cur);
         element(by.buttonText(obj.BankManagerPageObjects.locators.processBtn)).click();
         browser.sleep(obj.timeOut);
-        alert.getAlertText();
-        alert.alertaccept();
+        // alert.getAlertText();
+        // alert.alertaccept();
         browser.sleep(obj.timeOut);
     }
     this.checkCustomerInfo=function(fname){

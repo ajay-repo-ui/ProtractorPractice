@@ -6,9 +6,9 @@ var obj = require('..//util//Objects.json');
 describe("Validate Sample Form Registration", function () {
 
     beforeEach(function () {
-        BasePage.navigatetoURL(obj.url);
+        BasePage.navigateToURL(obj.url);
         browser.sleep(2000);
-        HomePage.sampleForm();
+        HomePage.SampleForm();
     });
 
     it("Verify the Sample form by entering all required details", function () {
